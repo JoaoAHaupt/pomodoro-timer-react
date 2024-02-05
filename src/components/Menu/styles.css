@@ -1,0 +1,13 @@
+.Menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #b84430;
+    height: 700px;
+    width: 20%;
+    border-radius: 3%;
+    padding: 1rem;
+
+}
+

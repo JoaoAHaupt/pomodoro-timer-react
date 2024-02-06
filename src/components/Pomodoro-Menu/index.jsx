@@ -49,7 +49,6 @@ export const PomodoroMenu = () => {
             setTimerRunning(false); 
             setButtonName('Start')
         }
-
     };
 
     return (

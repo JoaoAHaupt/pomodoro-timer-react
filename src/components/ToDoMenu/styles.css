@@ -11,19 +11,3 @@
     color: #f0f0f0;
 }
 
-.input{
-    border: none;
-    border-radius: 2px;
-}
-
-.addButton{
-    border-radius: 40%;
-    border: none;
-    cursor: pointer;
-}
-
-.task{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}

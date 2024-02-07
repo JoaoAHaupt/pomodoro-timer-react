@@ -1,0 +1,37 @@
+.TasksDiv {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 0.1em solid black;
+    border-radius: 5px;
+
+    width: 90%;
+    height: 100px; 
+}
+
+.task {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 30%;
+    padding: 10px; 
+    border-radius: 5px;
+    border: 0.1em solid black;
+    box-sizing: border-box;
+}
+
+.checkButton {
+    margin-right: 10px; 
+    border-radius: 2px;
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+p {
+    margin: 0; /* Removendo a margem padrão do parágrafo */
+}

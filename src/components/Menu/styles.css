@@ -8,6 +8,28 @@
     width: 20%;
     border-radius: 3%;
     padding: 1rem;
+    transition: background-color 0.7s ease-in-out;
+
 
 }
+@media screen and (max-width: 2000px) {
+    .Menu {
+      width: 30%;
+    }
+  
+  }
 
+  @media screen and (max-width: 1400px) {
+    .Menu {
+      width: 40%;
+    }
+  
+  }
+
+@media screen and (max-width: 600px) {
+    .Menu {
+      width: 80%;
+    }
+  
+  }
+  

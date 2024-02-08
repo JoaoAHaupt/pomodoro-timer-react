@@ -3,9 +3,9 @@
 .App {
   height: 100vh;   
   text-align: center;
-  background-color: tomato;
+  background-color: #5f758e;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
+

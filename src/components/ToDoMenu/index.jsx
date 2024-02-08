@@ -24,7 +24,7 @@ export const ToDoMenu = () =>{
     
     return(
         <>
-            <h2 className='Tasks'>Tasks {clickedIndexes.length}/{tasksList.length}</h2>
+            <h2 className='Tasks'>Tasks <br></br>{clickedIndexes.length}/{tasksList.length}</h2>
             <>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
 

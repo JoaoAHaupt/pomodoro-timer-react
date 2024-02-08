@@ -1,24 +1,27 @@
 .TasksDiv {
+    min-height: 7rem;
     align-items: center;
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
-    border: 0.1em solid black;
+    border: 0.3em solid  rgba(0, 0, 0, 0.28);
     border-radius: 5px;
     overflow-y: scroll;
-    width: 90%;
-
+    width: 70%;
+    background-color: rgba(240, 248, 255, 0.221);
 }
 
 .task {
+    background-color: rgba(245, 245, 220, 0.364);
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 30%;
+    width: 70%;
     padding: 10px; 
     border-radius: 5px;
-    border: 0.1em solid black;
+    border: 0.2em solid rgba(54, 10, 43, 0.4);
     box-sizing: border-box;
+    margin: 0.5em;
 }
 
 .checkButton {
@@ -45,4 +48,20 @@ p {
 }
 s {
     text-decoration-thickness: 3px; 
+    color: rgba(0, 0, 0, 0.586);
 }
+
+
+@media screen and (max-width: 2000px) {
+    .task {
+      width: 80%;
+    }
+  
+  }
+
+  @media screen and (max-width: 1000px) {
+    .task {
+      width: 100%;
+    }
+  
+  }

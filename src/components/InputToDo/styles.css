@@ -1,8 +1,10 @@
 .input{
+    background-color: rgba(255, 255, 255, 0.776);
     border: none;
     border-radius: 15px;
     margin: 0.5rem;
     font-weight: bold;
-    color: tomato;
-   
+    color: rgba(255, 99, 71, 0.835);
+    outline-color: rgb(255, 140, 0);
+    padding: 0.1rem;
 }

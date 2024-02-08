@@ -1,14 +1,12 @@
 .PomodoroMenu{
     width: 100%;
-    margin:2rem;
     
+    transition: background-color 0.5s ease;
 }
-.PomodoroMenu img{
-    width: 200px;
-    animation: moveRightToLeft 0.1s linear infinite; 
+.PomodoroMenu img {
+  width: 200px; 
+}
 
-    
-}
 /*
 @keyframes moveRightToLeft {
     0% {

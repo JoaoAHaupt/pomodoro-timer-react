@@ -7,10 +7,12 @@ import './styles.css';
 import { useState, useEffect } from 'react';
 
 export const PomodoroMenu = ({setMenuColor}) => {
-    const [seconds, setSeconds] = useState(10);
-    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState('00');
+    const [minutes, setMinutes] = useState(25);
     const [timerRunning, setTimerRunning] = useState(false); 
     const [buttonName, setButtonName] = useState('Start');
+    const [pomodoroRest, setPomodoroRest] = useState(false);
+
 
     function playButton(){
         new Audio(buttonSound).play()
@@ -20,29 +22,13 @@ export const PomodoroMenu = ({setMenuColor}) => {
         new Audio(endSound).play()
     }
 
-    function timePreset(){
-        
-        if (seconds === 0 && minutes === 0) {
-            setMinutes(4)
-            setSeconds(59)
-            setMenuColor('#009cb8');
-
-        } else {
-            if (seconds === 0) {
-                setMinutes(minutes - 1);
-                setSeconds(59);
-            } else {
-                setSeconds(seconds - 1);
-            }
-        }
-    }
 
     useEffect(() => {
         let timerId;
   
 
         if (timerRunning) {
-            if(minutes===25 && seconds ===0){
+            if(minutes===25 && seconds ==='00'){
                 setMinutes(24)
                 setSeconds(59)
             }
@@ -53,17 +39,28 @@ export const PomodoroMenu = ({setMenuColor}) => {
                     
                 }
 
-                if (seconds === 0 && minutes === 0) {
+                if (seconds === 0 && minutes === 0 && pomodoroRest ===false) {
                     setTimeout(() => {
-                        setMinutes(4)
-                        setSeconds(59)
-                        setMenuColor('#009cb8');
+                        setPomodoroRest(true);
+                        setMinutes(4);
+                        setSeconds(59);
+                        setMenuColor('#30a4b8');
                         setTimerRunning(false); 
                         setButtonName('Start')
                     }, 3000);
+                } 
+                else if(seconds === 0 && minutes === 0 && pomodoroRest ===true){
+                    setTimeout(() => {
+                        setPomodoroRest(false);
 
-
-                } else {
+                        setMinutes(24);
+                        setSeconds(59);
+                        setMenuColor('#b84430');
+                        setTimerRunning(false); 
+                        setButtonName('Start');
+                    }, 3000);
+                }
+                else {
                     if (seconds === 0) {
                         setMinutes(minutes - 1);
                         setSeconds(59);

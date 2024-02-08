@@ -7,7 +7,8 @@ export const InputToDo = ({taskName, handleInputChange}) =>{
         className='input' 
         placeholder='Ex: Do My math Exercise'
         value={taskName} 
-        onChange={handleInputChange} 
+        onChange={handleInputChange}
+        maxLength={19}
         />
     );
 }

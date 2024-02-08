@@ -8,6 +8,8 @@ import './styles.css';
 export const ToDoMenu = () =>{
     const [taskName, setTaskName] = useState('');
     const [tasksList, setTasksList] = useState([]);
+    const [clickedIndexes, setClickedIndexes] = useState([]);
+
 
     const handleInputChange = (event) => {
         setTaskName(event.target.value);
@@ -22,12 +24,15 @@ export const ToDoMenu = () =>{
     
     return(
         <>
-            <h2 className='Tasks'>Tasks</h2>
-            <div className='bar'></div>
+            <h2 className='Tasks'>Tasks {clickedIndexes.length}/{tasksList.length}</h2>
             <>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+
                 <InputToDo taskName={taskName} handleInputChange={handleInputChange}/>
                 <AddButton handleAddTask={handleAddTask}/>
-                <Task tasksList={tasksList}/>
+            </div>
+
+            <Task tasksList={tasksList} setTasksList={setTasksList} clickedIndexes={clickedIndexes} setClickedIndexes={setClickedIndexes} />
 
             </>
 

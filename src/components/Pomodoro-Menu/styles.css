@@ -5,5 +5,20 @@
 }
 .PomodoroMenu img{
     width: 200px;
+    animation: moveRightToLeft 0.1s linear infinite; 
+
     
 }
+/*
+@keyframes moveRightToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(10%);
+    }
+  }
+  */

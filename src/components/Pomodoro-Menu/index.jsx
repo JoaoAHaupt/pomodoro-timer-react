@@ -52,12 +52,12 @@ export const PomodoroMenu = ({setMenuColor}) => {
                 else if(seconds === 0 && minutes === 0 && pomodoroRest ===true){
                     setTimeout(() => {
                         setPomodoroRest(false);
+                        
 
                         setMinutes(24);
                         setSeconds(59);
                         setMenuColor('#b84430');
-                        setTimerRunning(false); 
-                        setButtonName('Start');
+
                     }, 3000);
                 }
                 else {
@@ -89,6 +89,7 @@ export const PomodoroMenu = ({setMenuColor}) => {
 
     return (
         <div className='PomodoroMenu'>
+
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/533-tomato.svg/2048px-533-tomato.svg.png" alt="" />
             <Timer seconds={seconds} minutes={minutes}/>
             <ButtonStart buttonName={buttonName} handleButton={handleClickStart}/>

@@ -28,5 +28,4 @@ This project is a Pomodoro Timer with an integrated To-Do List, built using Reac
 - React: A JavaScript library for building user interfaces.
 - React Hooks: Allows for stateful logic in functional React components.
 - CSS: Used for styling the application.
-- Local Storage: Stores to-do list items locally for persistence across sessions.
 

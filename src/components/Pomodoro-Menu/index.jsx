@@ -12,6 +12,7 @@ export const PomodoroMenu = ({setMenuColor}) => {
     const [timerRunning, setTimerRunning] = useState(false); 
     const [buttonName, setButtonName] = useState('Start');
     const [pomodoroRest, setPomodoroRest] = useState(false);
+    const [title, setTitle] = useState('WORK TIME!');
 
 
     function playButton(){
@@ -45,8 +46,7 @@ export const PomodoroMenu = ({setMenuColor}) => {
                         setMinutes(4);
                         setSeconds(59);
                         setMenuColor('#30a4b8');
-                        setTimerRunning(false); 
-                        setButtonName('Start')
+                        setTitle('REST TIME!')
                     }, 3000);
                 } 
                 else if(seconds === 0 && minutes === 0 && pomodoroRest ===true){
@@ -57,6 +57,7 @@ export const PomodoroMenu = ({setMenuColor}) => {
                         setMinutes(24);
                         setSeconds(59);
                         setMenuColor('#b84430');
+                        setTitle('WORK TIME!')
 
                     }, 3000);
                 }
@@ -89,8 +90,8 @@ export const PomodoroMenu = ({setMenuColor}) => {
 
     return (
         <div className='PomodoroMenu'>
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/533-tomato.svg/2048px-533-tomato.svg.png" alt="" />
+            <p className='title'>{title}</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/533-tomato.svg/2048px-533-tomato.svg.png" alt="Tomato Image" />
             <Timer seconds={seconds} minutes={minutes}/>
             <ButtonStart buttonName={buttonName} handleButton={handleClickStart}/>
         </div>
